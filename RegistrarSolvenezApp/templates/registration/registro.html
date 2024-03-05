@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | Nuevo cliente</title>
+    <link rel="stylesheet" href="{% static 'RegistrarSolvenezApp/css/registro.css' %}">
+</head>
+<body>
+
+    <div class="padre">
+
+        <div class="login-container">
+
+            <div class="centrador">
+
+                <p class="title">Registro</p>
+                <div class="linea-separator"></div>
+
+                <ul class="list-pasos">
+                    <li class="list-one" >
+                        <p id="op-G">1</p>
+                        <p id="op-P">Autentificación del cliente</p>
+                    </li>
+
+                    <li class="list-one">
+                        <p id="op-G">2</p>
+                        <p id="op-P">Aceptación de contrato</p>
+                    </li>
+
+                    <li class="list-one" id="morado">
+                        <p id="op-G">3</p>
+                        <p id="op-P">Registro de Usuario</p>
+                    </li>
+
+                    <li class="list-one">
+                        <p id="op-G">4</p>
+                        <p id="op-P">Código de autorización</p>
+                    </li>
+                </ul>
+
+                
+                <p id="info_L">Ingrese los datos solicitados y luego presione el botón Aceptar.</p>
+                
+                
+      
+                <form  method="post">
+                    {% csrf_token %}
+
+                    <div class="row">
+                        <div class="colum">  
+                        
+                            {{formsR}}
+                        </div> 
+
+                    </div>
+
+                    <br>
+                    <span class="Obli">*Campos obligatorio</span>
+                    <br>
+
+                    <button type="submit" class="boton_volver" onclick="volver()">Volver</button>
+                    <button type="submit" id="boton_2" class="boton_validar" onclick="">Validar</button>
+
+        
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

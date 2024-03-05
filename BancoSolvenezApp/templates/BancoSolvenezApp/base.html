@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'BancoSolvenezApp/css/base.css' %}">
+
+</head>
+<body>
+    
+    <!--Inicio de página-->
+
+    <header class="Inicio">
+        <div class="logo">
+            <a href="{% url 'Inicio' %}" class='soli_mg'>
+                <img src="{% static 'BancoSolvenezApp/img/logo.png' %}" alt="Solvenez_Logo"  width="226px" height="73px">
+            </a>
+
+            <ul class="opciones_1">
+
+                <li class="lista">
+                    <a href="{% url 'Sobre_nosotros' %}" id="st">SOMOS SOLVENEZ</a>
+                </li>
+
+                <li class="lista">
+                    <a href="#" id="st">ATENCIÓN AL CLIENTE</a>
+                </li>
+
+                <li class="lista">
+                    <a href="#" id="st">CALENDARIO</a>
+                </li>
+
+                <li class="lista">
+                    <form action="/search" method="get">
+                        <div class="dire">
+                            <input type="text" name="q" placeholder="Buscar" id="id_buscar">
+                            <button type="submit" id="img-busca">
+                                <img src="{% static 'BancoSolvenezApp/img/Group.svg' %}" alt="Lupa" width="20px" height="47px">
+                            </button>
+                        </div>
+                        
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <nav class="img-movi"> 
+        <img src="{% static 'BancoSolvenezApp/img/panel.jpg' %}" alt="Img1" width="100%" height="383.47px">
+
+        <div id="two" class="cuadro_nar">
+            <p class="movi_letra" id="te">¡BIENVENIDO!</p>
+        </div>
+
+    </nav>
+
+
+    <section class="Banca_global">
+        <div class="banca_linea">
+            <h2 id="li">Banca en línea</h2>
+            <ul class="buton_linea">
+                <li class="listal">
+                    <a href="{% url 'Perfil' %}" style="text-decoration: none;">
+                        <div class="one_boot">
+                            <img src="{% static 'BancoSolvenezApp/img/13.svg' %}" alt="personas" id="empe">
+                            <p id="leb">PERSONA NATURAL</p>
+                        </div>
+                    </a>
+
+                </li>
+
+                <li class="listal">
+                    <a href="#" style="text-decoration: none;">
+                        <div class="one_boot">
+                            <img src="{% static 'BancoSolvenezApp/img/12.svg' %}" alt="empresas" id="empe">
+                            <p id="leb">EMPRESAS</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="text_banca">
+            <p class="cambios">
+                ¿Tu objetivo? <br> ¡Crecer! <br><br><br> ¿Nuestra misión? <br> ¡Hacer posible tu crecimiento!
+            </p>
+        </div>
+    </section>
+
+    <!--Inicio de página-->
+
+    <!--Contenido Cambiente-->
+
+
+    {% block content %}
+
+
+    {% endblock %}
+
+
+    <!--Contenido Cambiente-->
+
+
+    <!--Pie de página-->
+
+    <footer class="pie_pag">
+
+        <div class="info_Gen">
+
+            <ul class="list_pie_one">
+
+                <li>
+                    <p id="ti_pie">Información de interés</p>
+                </li>
+
+                <li>
+                    <p id="ind_pie">Reclamos</p>
+                </li>
+
+                <li>
+                    <p id="ind_pie">Operaciones cambiarias</p>
+                </li>
+
+                <li>
+                    <p id="ind_pie">Consejos de seguridad</p>
+                </li>
+
+                <li>
+                    <p id="ind_pie">Cajeras de oficina</p>
+                </li>
+
+                <li>
+                    <p id="ind_pie">Calendario bancario 2024</p>
+                </li>
+
+            </ul>
+
+            <ul class="list_pie_one">
+
+                <li>
+                    <p id="ti_pie">Información corporativa</p>
+                </li>
+
+                <li>
+                    <p id="ind_pie">Historia</p>
+                </li>
+
+                <li>
+                    <p id="ind_pie">Administración y Consejo Ejecutivo</p>
+                </li>
+
+                <li>
+                    <p id="ind_pie">Sala de prensa</p>
+                </li>
+
+                <li>
+                    <p id="ind_pie">Información financiera</p>
+                </li>
+
+                <li>
+                    <p id="ind_pie">Relación con inversión</p>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="info_Esp">
+
+            <ul class="lis_pie_two">
+
+                <li>
+                    <img src="{% static 'BancoSolvenezApp/img/9.svg' %}" alt="" id="pie_redes">
+                </li>
+
+                <li>
+                    <img src="{% static 'BancoSolvenezApp/img/10.svg' %}" alt="" id="pie_redes">
+                </li>
+
+                <li>
+                    <img src="{% static 'BancoSolvenezApp/img/11.svg' %}" alt="" id="pie_redes">
+                </li>
+
+            </ul>
+
+            <div class="derechos">
+                <p id="der">Av. Universidad Sociedad, Edificio Banco Solvenez, Caracas, Distrito Capital. <br>
+                    © Banco Solvenez, S.A. Banco Universal © RIF G-50008857-1. Todos los derechos reservados.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+
+
+    </footer>
+
+
+
+
+
+
+    <!--Pie de página-->
+
+
+    <script src="{% static 'BancoSolvenezApp/js/base.js' %}"></script>
+
+</body>
+</html>

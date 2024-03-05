@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | Términos y Condiciones</title>
+    <link rel="stylesheet" href="{% static 'RegistrarSolvenezApp/css/terminos.css' %}">
+</head>
+<body>
+
+    <div class="padre">
+
+        <div class="login-container">
+
+            <div class="centrador">
+
+                <p class="title">Registro</p>
+                <div class="linea-separator"></div>
+
+                <ul class="list-pasos">
+                    <li class="list-one" >
+                        <p id="op-G">1</p>
+                        <p id="op-P">Autentificación del cliente</p>
+                    </li>
+
+                    <li class="list-one" id="morado">
+                        <p id="op-G">2</p>
+                        <p id="op-P">Aceptación de contrato</p>
+                    </li>
+
+                    <li class="list-one">
+                        <p id="op-G">3</p>
+                        <p id="op-P">Registro de Usuario</p>
+                    </li>
+
+                    <li class="list-one">
+                        <p id="op-G">4</p>
+                        <p id="op-P">Código de autorización</p>
+                    </li>
+                </ul>
+
+                <p class="info_C">Observe los términos y condiciones, presione "Estoy de acuerdo" y luego presione el botón Seguir.</p>
+                
+                <div class="container-terminos">
+                    <p class="terminos">Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input. 
+                        Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input.
+                        Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input.
+                        Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input.
+                    </p>
+
+                    <ul class="terminos">
+                        <li>
+                            Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input.
+                        </li>
+
+                        <li>
+                            Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input.
+                        </li>
+
+                        <li>
+                            Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input.
+                        </li>
+
+                        <li>
+                            Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input.
+                        </li>
+
+                        <li>
+                            Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input, Lorem input Lorem input Lorem input.
+                        </li>
+                    </ul>
+
+
+                    <form action="" class="for-termi" method="post">
+                        {% csrf_token %}
+
+                        <input type="checkbox" name="is_acept" id="is_acept" required>
+                        <label for="is_acept" id="Aceptar">Estoy de acuerdo</label>
+                        <br>
+                        <span class="Obli">*Campo obligatorio</span>
+
+                        <br>
+
+                        <button type="submit" class="boton_volver" onclick="volver()">Volver</button>
+                        <button type="submit" id="boton_2" class="boton_validar" onclick="cambiarColorTer()">Validar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="{% static 'RegistrarSolvenezApp/js/volver.js' %}"></script>
+    <script src="{% static 'RegistrarSolvenezApp/js/cambiar_color.js' %}"></script>
+</body>
+</html>

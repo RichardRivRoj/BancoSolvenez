@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.padre{
+    width: 100%;
+    height: 900px;
+    background-color: #ffffff;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container{
+    width: 740px;
+    height: 750px;
+    background-color: #ffffff;
+    border: 4px solid #FFC0CB;
+    border-radius: 15px;
+}
+
+.login-header img{
+    width: 160px;
+    height: 52px;
+    padding-top: 35px;
+}
+
+.titulo{
+    font-family: 'Poppins', sans-serif; 
+    font-size: 32px;
+    font-weight: 700;
+    font-style: normal;
+    margin: 35px 0px 32px 0px;
+}
+
+.formm{
+    display: block;
+    align-items:normal;
+}
+
+.alert{
+
+    display: flex;
+    margin: 0px 70px 0px 20px;
+}
+
+.m-0{
+    display: flex;
+    list-style-type: none;
+    font-family: 'Poppins', sans-serif; 
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    color:#F05941;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+#id_username, #id_password, .boton_entrar{
+    margin-block: 20px;
+}
+
+
+#id_username, #id_password{
+    width: 500px;
+    height: 65px;
+    background-color: #FFDBE6;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-right: 10px;
+    padding-left: 10px;
+}
+
+.boton_entrar{
+    width: 140px;
+    height: 60px;
+    border:none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 200;
+    font-style: normal;
+    cursor: pointer;
+    margin: 30px 0px 40px 0px;
+}
+
+a{
+    text-decoration: none;
+    color: #872341;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    display: block;
+    margin-block: -5px;
+}
+
+label{
+    display: block;
+    text-align: left;
+    margin-inline: 115px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    padding-top: -20px;
+}

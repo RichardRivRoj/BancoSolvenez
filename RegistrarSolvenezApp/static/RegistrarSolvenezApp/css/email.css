@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.padre{
+    width: 100%;
+    height: 900px;
+    background-color: #ffffff;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container{
+    width: 1295px;
+    height: 715px;
+    background-color: #ffffff;
+    border: 4px solid #FFC0CB;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.centrador{
+    display: block;
+    align-items: center;
+    margin-inline: 50px;
+}
+
+.title{
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    font-style: normal;
+    margin:  35px 0px 5px 0px;
+
+}
+
+.linea-separator{
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+
+}
+
+.list-pasos{
+    list-style-type: none;
+    display: flex;
+    align-items:start;
+    margin-inline: -70px;
+}
+
+.list-one{
+    display: inline-flex;
+    margin-inline: 45px;
+}
+
+#op-G{
+    font-family: 'Poppins', sans-serif;
+    font-size: 44px;
+    font-weight: 700;
+    font-style: normal;
+    margin:  0px 15px 5px 0px;
+}
+
+#op-P{
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    font-style: normal;
+    margin:  0px 0px 0px 7px;
+}
+
+#morado{
+    color: #872341;
+}
+
+/* Aqui termina el header de registro*/

@@ -1,0 +1,93 @@
+{% extends "BancoSolvenezApp/base.html" %}
+
+
+{% load static %}
+
+
+{% block content %}
+
+<title>Inicio</title>
+<link rel="stylesheet" href="{% static 'BancoSolvenezApp/css/inicio.css' %}">
+
+    <section class="Noticia_1">
+
+        <div class="Cont1" id="tit_sub">
+            <p id="title_cont1">
+                Mantente al día y <br>
+                conectado
+            </p>
+
+            <p id="sub_cont1">
+                Paga tu servicios con nosotros <br>
+                y comparte cada momento.
+            </p>
+        </div>
+
+        <div class="Cont1">
+            <img src="{% static 'BancoSolvenezApp/img/Rectangle1.jpg' %}" alt="Mujer sonriendo">
+        </div>
+    </section>
+
+
+    <section class="Noticia_2">
+
+        <div class="Cont_2">
+            <img src="{% static 'BancoSolvenezApp/img/1.svg' %}" alt="Cuenta digital">
+            <p class="movetext1" id="bajo_img">Cuenta digital</p>
+        </div>
+
+        <div class="Cont_2">
+            <img src="{% static 'BancoSolvenezApp/img/2.svg' %}" alt="Cuenta en divisas">
+            <p class="movetext2" id="bajo_img">Cuenta en divisas</p>
+        </div>
+
+        <div class="Cont_2">
+            <img src="{% static 'BancoSolvenezApp/img/3.svg' %}" alt="PagoMóvilSOL">
+            <p class="movetext3" id="bajo_img">PagoMóvilSOL</p>
+        </div>
+
+    </section>
+
+    <section class="Noticia_3">
+
+        <div class="mon1">
+
+            <img src="{% static 'BancoSolvenezApp/img/Atencion.svg' %}" alt="Atencion">
+            <p id="textC">Atención al Cliente y Usuario Bancario</p>
+            <a href="#" id="textA">Más información</a>
+
+        </div>
+
+        <div class="mon1">
+
+            <img src="{% static 'BancoSolvenezApp/img/Ayuda.svg' %}" alt="Ayuda">
+            <p id="textC">Ayuda Urgente</p>
+            <a href="#" id="textA">Más información</a>
+
+        </div>
+
+        <div class="mon1">
+
+            <img src="{% static 'BancoSolvenezApp/img/Linea.svg' %}" alt="Linea">
+            <p id="textC">Linea Solvenez 0500 8886157</p>
+            <a href="#" id="textA">Más información</a>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
