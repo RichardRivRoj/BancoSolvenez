@@ -7,7 +7,7 @@ body{
 
 .padre{
     width: 100%;
-    height: 1930px;
+    height: 1980px;
     background-color: #ffffff;
     display: flex;
     text-align: center;
@@ -17,7 +17,7 @@ body{
 
 .login-container{
     width: 1295px;
-    height: 1750px;
+    height: 1800px;
     background-color: #ffffff;
     border: 4px solid #FFC0CB;
     border-radius: 15px;
@@ -108,7 +108,7 @@ div.hola{
     border-bottom: 1px solid #000000;
     background-color: #ffdbe6;
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 200;
     font-style: normal;
     margin:  10px 0px 20px 300px;
@@ -127,6 +127,14 @@ label{
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-weight: 600;
+    font-style: normal;
+    margin:  0px 0px 20px 300px;
+}
+
+.form-text{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
     font-style: normal;
     margin:  0px 0px 20px 300px;
 }
@@ -165,6 +173,10 @@ label{
     font-style: normal;
     border: none;
     cursor: pointer;
+}
+
+#error_1_id_respuesta_seguridad, #error_1_id_tipo_doc, #error_1_id_cedula, #error_1_id_fecha_nacimiento, #error_1_id_genero, #error_1_id_username, #error_1_id_pregunta_seguridad, #error_1_id_password1, #error_1_id_password2{
+    display: none;
 }
 
 

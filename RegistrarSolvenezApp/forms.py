@@ -2,7 +2,7 @@ from django import forms
 from user.models import User
 from django.contrib.auth.forms import UserCreationForm
 
-class NuevoUsuarioForm(UserCreationForm):
+class CustomUserCreationForm(UserCreationForm):
     class Meta:
         model = User
         fields = [
@@ -78,7 +78,6 @@ class NuevoUsuarioForm(UserCreationForm):
             'cedula':'',
             'fecha_nacimiento':'',
             'genero':'',
-            'username': '',
             'email':'',
             'pregunta_seguridad':'',
             'respuesta_seguridad':'',
@@ -109,3 +108,13 @@ class ValidarForm(forms.ModelForm):
             'tipo_doc':'',
             'cedula':'',
         }
+
+
+class VerificacionFrom(forms.Form):
+
+    codigo = forms.CharField(
+        label= '*Código de confirmación:',
+        widget= forms.TextInput(attrs={
+            'placeholder': 'Introduzca el código', 'class':'codigo', 'id':'form0', 'required': 'required',
+        })
+    )

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body{
     margin: 0;
     padding: 0;
@@ -5,7 +7,7 @@ body{
 
 .padre{
     width: 100%;
-    height: 900px;
+    height: 1000px;
     background-color: #ffffff;
     display: flex;
     text-align: center;
@@ -15,7 +17,7 @@ body{
 
 .login-container{
     width: 1295px;
-    height: 715px;
+    height: 850px;
     background-color: #ffffff;
     border: 4px solid #FFC0CB;
     border-radius: 15px;
@@ -77,3 +79,81 @@ body{
 }
 
 /* Aqui termina el header de registro*/
+
+.text-conf{
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    padding: 45px;
+}
+
+.error{
+    color:#f05941;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    border: none;
+    text-align: center;
+}
+
+label{
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    font-style: normal;
+    margin: 0px 0px 0px 125px;
+}
+
+.codigo{
+    width: 35%;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid #000000;
+    background-color: #ffdbe6;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    font-style: normal;
+    margin: 0px 0px 0px 75px;
+    padding-left: 10px;
+}
+
+.Obli{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    margin:  20px 0px 0px 125px;
+    color: #f05941;
+}
+
+.boton_volver{
+    width: 150px;
+    height: 60px;
+    background-color: #872341;
+    color:#ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    font-style: normal;
+    margin:  100px 125px 0px 360px;
+    border: none;
+    cursor: pointer;
+}
+
+.boton_validar{
+    width: 150px;
+    height: 60px;
+    background-color: #872341;
+    color:#ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    font-style: normal;
+    border: none;
+    cursor: pointer;
+}
+

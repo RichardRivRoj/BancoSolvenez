@@ -42,6 +42,49 @@
                     </li>
                 </ul>
 
+                <p class="titulo-fin">
+                    ¡Has completado tu registro con éxito! <br>
+                    ¡Bienvenido!
+                </p>
+
+                <div class="user">
+                    <p class="negris">
+                        Uruario:
+                    </p>
+                    <p class="blanquis">
+                       {{usuario.username}}
+                    </p>
+                </div>
+
+                <div class="user">
+                    <p class="negris">
+                        Tipo de cuenta:
+                    </p>
+                    <p class="blanquis">
+                        {{cuenta.tipo_cuenta}}
+                    </p>
+                </div>
+
+                <div class="user">
+                    <p class="negris">
+                        Número de cuenta::
+                    </p>
+                    <p class="blanquis">
+                        {{cuenta.n_cuenta}}
+                    </p>
+                </div>
+
+                <p class="mensaje">
+                    Presione <strong>Iniciar</strong> para inciar sesión
+                </p>
+
+                <form action="{% url 'Perfil' %}">
+
+                    <button type="submit" id="boton_2" class="boton_validar" onclick="">Iniciar</button>
+                </form>
+
+                
+
             </div>
 
 

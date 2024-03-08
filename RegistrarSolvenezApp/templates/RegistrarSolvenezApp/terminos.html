@@ -74,7 +74,7 @@
                     </ul>
 
 
-                    <form action="" class="for-termi" method="post">
+                    <form action="{% url 'registro' %}" class="for-termi" method="post">
                         {% csrf_token %}
 
                         <input type="checkbox" name="is_acept" id="is_acept" required>

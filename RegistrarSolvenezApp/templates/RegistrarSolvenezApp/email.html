@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro | Vefificación</title>
+    <title>Registro | Verificación</title>
     <link rel="stylesheet" href="{% static 'RegistrarSolvenezApp/css/email.css' %}">
 </head>
 <body>
@@ -42,6 +42,30 @@
                     </li>
                 </ul>
 
+
+                <p class="text-conf"> 
+                    Hemos enviado un código de confirmación a su correo <br>
+                    electrónico. Por favor, reviselo e introdúzcalo <br>
+                    para confimar su cuenta.
+                </p>
+
+                <form action="" method="post">
+
+                    {% csrf_token %}
+
+                    <p class="error">{{error}}</p>
+
+                    {{formE}}
+
+                    <br>
+                    <span class="Obli">*Campo obligatorio</span>
+                    <br>
+
+                    <button type="submit" class="boton_volver" onclick="volver()">Volver</button>
+                    <button type="submit" id="boton_2" class="boton_validar" onclick="">Validar</button>
+
+                </form>
+
             </div>
 
 
@@ -52,3 +76,8 @@
 
 
     </div>
+
+    <script src="{% static 'RegistrarSolvenezApp/js/volver.js' %}"></script>
+    <script src="{% static 'RegistrarSolvenezApp/js/cambiar_color.js' %}"></script>
+</body>
+</html>

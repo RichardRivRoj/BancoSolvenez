@@ -1,13 +1,15 @@
 function cambiarColorTex() {
 
+
+    var tipo_doc = document.getElementById("Tipo_doc");
     var documento = document.getElementById("cedula");
     var boton = document.getElementById("boton_2");
 
-    if (documento.value === ""){
+    if ( tipo_doc.value == "" || documento.value === ""){
 
         // si no estan rellenos, bloquear el botón y cambiar su color de fondo a #d6d6d6
         boton.disabled = true;
-        boton.style.backgroundColor = "#d6d6d6";
+        boton.style.backgroundColor = "blue";
         boton.style.color = "#000000";
 
     } else {
