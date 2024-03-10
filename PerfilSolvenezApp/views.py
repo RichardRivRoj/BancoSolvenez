@@ -13,3 +13,7 @@ def exit(request):
 
     logout(request)
     return redirect('Inicio')
+
+def base(request):
+
+    return render(request, 'PerfilSolvenezApp/base.html')
