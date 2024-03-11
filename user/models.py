@@ -36,3 +36,7 @@ class Cuenta(models.Model):
     tipo_cuenta = models.CharField(max_length=20, choices=TIPO_CUENTA_CHOICES, default='corriente')
     saldo = models.DecimalField(max_digits=11, decimal_places=2, default=0.00)
     user_fk = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+
+        return f"{self.n_cuenta} - {self.tipo_cuenta}"

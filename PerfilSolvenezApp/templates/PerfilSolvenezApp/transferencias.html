@@ -1,0 +1,48 @@
+{% extends "PerfilSolvenezApp/base.html" %}
+
+
+{% load static %}
+{% load humanize %}
+
+
+{% block content %}
+
+    <title>Transferencias | Solvenez</title>
+    <link rel="stylesheet" href="{% static 'PerfilSolvenezApp/css/transferencias.css' %}">
+    <link rel="stylesheet" href="{% static 'PerfilSolvenezApp/css/perfil.css' %}">
+
+    <div class="bienvenida">
+
+        <h1 id="title_b">Bienvenido {{request.user.first_name}} {{request.user.last_name}}</h1>
+        <p id="ult_conex">Última conexión {{request.user.last_login|date:"d/m/y H:i A" }}</p>
+
+    </div>
+
+    <div class="contene">
+
+        <div id="tex-title">
+            <h2>Transferencias a terceros</h2>
+        </div>
+        
+   
+
+        <div class="formu">
+            <form action="" method="post">
+
+                {% csrf_token %}
+
+                {{formsT}}
+
+                <button type="submit" class="boton_volver" onclick="volver()">Transferir</button>
+                <button type="submit" id="boton_2" class="boton_validar" onclick="cambiarColorTer()">Limpiar</button>
+
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+{% endblock %}

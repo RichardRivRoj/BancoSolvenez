@@ -2,6 +2,7 @@
 
 
 {% load static %}
+{% load humanize %}
 
 
 {% block content %}
@@ -9,13 +10,86 @@
     <title>Perfil | Solvenez</title>
     <link rel="stylesheet" href="{% static 'PerfilSolvenezApp/css/perfil.css' %}">
 
+    <div class="bienvenida">
 
-
-    <div class="col-md-20" id="bb">
-
-        <div class="bienvenida">
+        <h1 id="title_b">Bienvenido {{request.user.first_name}} {{request.user.last_name}}</h1>
+        <p id="ult_conex">Última conexión {{request.user.last_login|date:"d/m/y H:i A" }}</p>
 
     </div>
+
+    <div class="contene">
+
+        <div id="tex-title">
+            <p>Posición Consolidada</p>
+        </div>
+
+       <div>
+            <form action="" method="get">
+                <select name="tipo_cuenta" id="c">
+                    <option value="0">Ver todas</option>
+                    <option value="C">Corriente</option>
+                    <option value="T">Ahorros</option>
+                </select>
+            </form>
+        </div>
+
+        <div>
+            <h2 id="cuentas-ti">Cuentas</h2>
+            <p id="disponible">Total disponible:</p>
+            <p id="saldo_total">Bs. {{ saldo_total|floatformat:2|intcomma }}</p>
+
+        </div>
+
+        <div>
+
+            <div class="campos">
+
+                <ul class="list-campos">
+                    <li id="a">
+                        Cuenta
+                    </li>
+                    <li id="b">
+                        Saldo
+                    </li>
+
+                    <li id="d">
+                        Movimientos
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="linea-mor"></div>
+
+            {% for cuenta in cuentas %}
+
+                <div class="datos">
+
+                    <p class="cuenta-in">
+                        Cuenta {{ cuenta.tipo_cuenta }} <br>
+                        {{ cuenta.n_cuenta }}
+                    </p>
+
+                    <p class="cuenta_in" id="l">
+                        Bs. {{ cuenta.saldo|floatformat:2|intcomma }}
+                    </p>
+
+                    <a href="{% url 'movimientos' %}">
+                        <img src="{% static 'PerfilSolvenezApp/img/14.svg' %}" alt="Movimientos" width="40px" height="40px" id="m">
+                    </a>
+                </div>
+
+                <div class="lineas-sep"></div>
+
+
+            {% endfor %}
+            
+        </div>
+
+      
+    </div>
+
+    
 
 
 

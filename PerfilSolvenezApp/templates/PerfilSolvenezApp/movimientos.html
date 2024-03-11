@@ -1,0 +1,126 @@
+{% extends "PerfilSolvenezApp/base.html" %}
+
+
+{% load static %}
+{% load humanize %}
+
+
+{% block content %}
+
+    <title>Movimientos | Solvenez</title>
+    <link rel="stylesheet" href="{% static 'PerfilSolvenezApp/css/movimientos.css' %}">
+    <link rel="stylesheet" href="{% static 'PerfilSolvenezApp/css/perfil.css' %}">
+
+    <div class="bienvenida">
+
+        <h1 id="title_b">Bienvenido {{request.user.first_name}} {{request.user.last_name}}</h1>
+        <p id="ult_conex">Última conexión {{request.user.last_login|date:"d/m/y H:i A" }}</p>
+
+    </div>
+
+    <div class="contene">
+
+        <div id="tex-title">
+            <h2>Movimientos en Línea</h2>
+        </div>
+
+        <div>
+            <form action="" method="get">
+                <input type="search" name="buscar" id="c" placeholder="Buscar" style="padding-left: 10px;">
+            </form>
+        </div>
+
+        <div class="tipo-cu">
+            <p id="cuentas-tii">Cuenta: </p>
+            <p id="num-cuenta">el número de cuenta</p>
+        </div>
+
+        <div>
+
+            <div class="campos">
+
+                <ul class="list-campos">
+                    <li id="a">
+                        Fecha
+                    </li>
+                    <li id="d">
+                        Referencia
+                    </li>
+
+                    <li id="d">
+                        Descripción
+                    </li>
+
+                    <li id="d">
+                        Débito/Crédito
+                    </li>
+
+                    <li id="d">
+                        Monto
+                    </li>
+
+                    <li id="e">
+                        Saldo
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="linea-mor"></div>
+
+            {% for movimiento in movimientos %}
+
+                <div class="datos">
+
+                    <p class="fecha-in">
+                        {{ movimiento.fecha|date:"d/m/y" }}
+                    </p>
+
+                    <p class="referencia_in" id="l">
+                        {{ movimiento.referencia }}
+                    </p>
+
+                    <p class="descripcion-in" id="l">
+                        {{ movimiento.descripcion }}
+                    </p>
+
+                    <p class="tipo_t_in" id="l">
+                        {{ movimiento.tipo_transaccion }}
+                    </p>
+
+                    <p class="monto-in" id="l">
+                        {{ movimiento.monto }}
+                    </p>
+
+                    {% if movimiento.tipo_transaccion == 'CRÉDITO'  %}
+
+                        <p class="tipo_t_in" id="l">
+                            {{ movimiento.saldo_receptor|floatformat:2|intcomma }}
+                        </p>
+
+                    {% else %}
+
+                        <p class="tipo_t_in" id="l">
+                            {{ movimiento.saldo_emisor|floatformat:2|intcomma }}
+                        </p>
+                    {% endif %}
+
+                </div>
+
+                <div class="lineas-sep"></div>
+
+
+            {% endfor %}
+            
+        </div>
+
+        
+
+    </div>
+
+
+
+
+
+
+{% endblock %}

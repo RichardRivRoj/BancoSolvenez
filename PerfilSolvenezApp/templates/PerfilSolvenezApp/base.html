@@ -23,7 +23,7 @@
                             </a>
                         </div>
                         <div>
-                            <img src="{% static 'PerfilSolvenezApp/img/blanco.png' %}" alt="Logo-blanco" width="275px" height="75px"  id="sx">
+                            <img src="{% static 'PerfilSolvenezApp/img/blanco.png' %}" alt="Logo-blanco" width="275px" height="70px"  id="sx">
                         </div>
                     </div>
                     <nav id="sidebar">
@@ -31,7 +31,7 @@
                             <ul class="list-unstyled components mb-5">
                                 <li class="active">
                                     <img src="{% static 'PerfilSolvenezApp/img/15.svg' %}" alt="Ps C" width="65px" height="65px">
-                                    <a href="#P">Posición consolidad</a>
+                                    <a href="{% url 'Perfil' %}">Posición consolidad</a>
                                     
                                 </li>
                                 <br>
@@ -47,7 +47,7 @@
                                 <br>
                                 <li class="active">
                                     <img src="{% static 'PerfilSolvenezApp/img/17.svg' %}" alt="Ps C" width="65px" height="65px">
-                                    <a href="#">Tranferencias</a>
+                                    <a href="{% url 'transferencias' %}">Tranferencias</a>
                                     
                                 </li>
                                 <br>
@@ -97,12 +97,13 @@
                     </nav>
                 </div>
 
-                
-                {% block content %}
+                <div class="col-md-20" id="bb">
+                    {% block content %}
 
 
                     
-                {% endblock %}
+                    {% endblock %}
+                </div>
                
             </div>
         </div>
