@@ -1,25 +1,3 @@
-.tipo-cu{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    margin: 0px 0px 0px 450px;
-}
-
-#cuentas-tii{
-    font-family: 'Poppins', sans-serif;
-    font-size: 24px;
-    font-weight: 600;
-    font-style: normal;
-    color: #872341;
-}
-
-#num-cuenta{
-    font-family: 'Poppins', sans-serif;
-    font-size: 22px;
-    font-weight: 600;
-    font-style: normal;
-    margin-left: 5px;
-}
 
 .list-campos{
     display: flex;
@@ -27,11 +5,41 @@
     margin: 75px 0px 20px 0px;
 }
 
+#a{
+    margin: 0px 20px 0px 0px;
+}
+
 #d{
-    margin-inline: 50px;
-    padding-inline: 20px;
+    margin-inline: 15px;
+    padding-inline: 50px;
+    padding-right: 50px;
 }
 
 #e{
-    margin-left: 15px;
+    margin: 0px 0px 0px 20px;
+    padding-left: 40px;
+}
+
+.datosr{
+    display:flex;
+    margin-top: 5px;
+    padding-right: 40px;
+}
+
+#r{
+    margin-inline: 75px;
+    padding-top: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+}
+
+#s{
+    margin-left: 40px;
+    padding-top: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
 }

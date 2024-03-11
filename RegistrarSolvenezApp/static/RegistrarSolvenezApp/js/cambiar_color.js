@@ -1,24 +1,20 @@
 function cambiarColorTex() {
 
+    document.getElementById('cedula').addEventListener('change', function() {
+        var tipo_doc = document.getElementById("Tipo_doc");
+        var documento = document.getElementById("cedula");
+        var boton = document.getElementById("boton_2");
 
-    var tipo_doc = document.getElementById("Tipo_doc");
-    var documento = document.getElementById("cedula");
-    var boton = document.getElementById("boton_2");
-
-    if ( tipo_doc.value == "" || documento.value === ""){
-
-        // si no estan rellenos, bloquear el botón y cambiar su color de fondo a #d6d6d6
-        boton.disabled = true;
-        boton.style.backgroundColor = "blue";
-        boton.style.color = "#000000";
-
-    } else {
-
-        // si estan rellenos, desbloquear el botón y cambiar su color de fondo a #872341
-        boton.disabled = false;
-        boton.style.backgroundColor = "#872341";
-        boton.style.color = "#ffffff";
-    }
+        if (tipo_doc.value === "" || documento.value === "") {
+            boton.disabled = true;
+            boton.style.backgroundColor = "#d6d6d6";
+            boton.style.color = "#000000";
+        } else {
+            boton.disabled = false;
+            boton.style.backgroundColor = "#872341";
+            boton.style.color = "#ffffff";
+        }
+    })
 }
 
 

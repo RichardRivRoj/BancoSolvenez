@@ -19,7 +19,7 @@ class Movimientos(models.Model):
         ('COMPRA CON TARJETA DE DÉBITO', 'Compra con tarjeta de débito'),
     )
 
-    fecha = models.DateField(null=True, auto_now_add=True)
+    fecha = models.DateTimeField(null=True, auto_now_add=True)
     referencia = models.CharField(max_length=13)
     descripcion = models.CharField(max_length=50, choices=DESCRIPCION, default='TRANSFERENCIAS A TERCEROS')
     tipo_transaccion = models.CharField(max_length=10, choices=TIPO_TRANSACCION)

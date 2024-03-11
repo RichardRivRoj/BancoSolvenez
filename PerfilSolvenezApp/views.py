@@ -6,9 +6,11 @@ from django.db.models import Sum
 from .utils import transferir_fondos
 import random
 from .forms import TransaccionForm
-from django.db import connection
+from django.db import connection, transaction
 from .models import Movimientos
 from django.db.models import Q
+from datetime import datetime
+from decimal import Decimal
 # Create your views here.
 
 @login_required
@@ -27,7 +29,7 @@ def exit(request):
     logout(request)
     return redirect('Inicio')
 
-
+@transaction.atomic
 def transferencias(request):
 
 
@@ -44,6 +46,8 @@ def transferencias(request):
             receptor = formsT.cleaned_data['receptor_fk'].id
             monto = formsT.cleaned_data['monto']
             
+            
+            
             with connection.cursor() as cursor:
                 cursor.callproc('transferir_fondos', [
                     referencia,
@@ -53,7 +57,8 @@ def transferencias(request):
                     receptor,
                     monto,
                 ])
-
+            
+    
             HttpResponse('Transferencia realizada correctamente')
     else:
         formsT = TransaccionForm()
@@ -62,12 +67,32 @@ def transferencias(request):
 
 def movimientos(request):
 
-    usuario = request.user
+    usuario_actual = request.user
 
-    cuentas_usuario = Cuenta.objects.filter(user_fk_id=usuario)
+    cuentas_usuario = usuario_actual.cuenta_set.filter()
 
-    movimientos = Movimientos.objects.get(Q(emisor_fk_id=cuentas_usuario) | Q(receptor_fk_id=cuentas_usuario))
+    movimientos = Movimientos.objects.filter(Q(emisor_fk__in=cuentas_usuario) | Q(receptor_fk__in=cuentas_usuario))
     movimientos = movimientos.order_by('-fecha')
-    context = {'movimientos': movimientos}
+
+    movimientos_list = []
+
+    for movimiento in movimientos:
+
+        cuenta = movimiento.emisor_fk if movimiento.tipo_transaccion == 'DÉBITO' else movimiento.receptor_fk
+
+        mov = {
+            'fecha': movimiento.fecha,
+            'referencia': movimiento.referencia,
+            'descripcion': movimiento.descripcion,
+            'tipo_transaccion': movimiento.tipo_transaccion,
+            'monto': movimiento.monto,
+            'saldo': movimiento.saldo_receptor if movimiento.tipo_transaccion == 'CRÉDITO' else movimiento.saldo_emisor,
+            'numero_cuenta': cuenta.n_cuenta,
+        }
+
+        movimientos_list.append(mov)
+
+
+    context = {'movimientos': movimientos_list,}
 
     return render(request, 'PerfilSolvenezApp/movimientos.html', context)
