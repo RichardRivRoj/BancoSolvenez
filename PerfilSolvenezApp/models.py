@@ -29,7 +29,3 @@ class Movimientos(models.Model):
     emisor_fk = models.ForeignKey(Cuenta, on_delete=models.CASCADE, related_name='transacciones_emitidas')
     receptor_fk = models.ForeignKey(Cuenta, on_delete=models.CASCADE, related_name='transacciones_recibidas')
 
-    def __str__(self):
-
-        return self.emisor_fk
-

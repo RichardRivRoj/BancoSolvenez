@@ -87,12 +87,12 @@ WSGI_APPLICATION = 'BancoSolvenez.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME':'solvenez',
-        'USER':'postgres',
+        'USER':'root',
         'PASSWORD':'060303',
         'HOST':'127.0.0.1',
-        'DATABASE_PORT':'5432',
+        'DATABASE_PORT':'3306',
     }
 }
 

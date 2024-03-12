@@ -53,9 +53,9 @@ def transferencias(request):
                     referencia,
                     descripcion,
                     tipo_transaccion,
+                    monto,
                     emisor,
                     receptor,
-                    monto,
                 ])
             
     
